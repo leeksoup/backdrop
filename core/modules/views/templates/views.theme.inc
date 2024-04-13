@@ -1138,9 +1138,9 @@ function theme_views_form_views_form($variables) {
 function theme_views_mini_pager($variables) {
   global $pager_page_array, $pager_total;
 
-  // Both $pager_page_array and $pager_total must be set for this theme function to work.
+  // Pager is only needed if there are results.
   if (!$pager_page_array || ! $pager_total) {
-    return;
+    return '';
   }
 
   $tags = $variables['tags'];
