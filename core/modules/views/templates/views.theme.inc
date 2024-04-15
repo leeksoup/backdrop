@@ -1139,7 +1139,7 @@ function theme_views_mini_pager($variables) {
   global $pager_page_array, $pager_total;
 
   // Pager is only needed if there are results.
-  if (!$pager_page_array || ! $pager_total) {
+  if (!isset($pager_page_array[$element]) || empty($pager_total)) {
     return '';
   }
 
