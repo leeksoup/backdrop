@@ -1138,14 +1138,14 @@ function theme_views_form_views_form($variables) {
 function theme_views_mini_pager($variables) {
   global $pager_page_array, $pager_total;
 
+  $tags = $variables['tags'];
+  $element = $variables['element'];
+  $parameters = $variables['parameters'];
+
   // Pager is only needed if there are results.
   if (!isset($pager_page_array[$element]) || empty($pager_total)) {
     return '';
   }
-
-  $tags = $variables['tags'];
-  $element = $variables['element'];
-  $parameters = $variables['parameters'];
 
   // Current is the page we are currently paged to.
   $pager_current = $pager_page_array[$element] + 1;
